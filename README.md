@@ -1,11 +1,10 @@
 # BTK - Better Toolkit 
 
 ## Overview
-BTK is a modern, lightweight, and self-contained GUI framework designed to be a **stable, high-performance** alternative to GTK. It features **GPU-accelerated rendering** using Vulkan and aims to be **free from GNOME's breaking changes and dependency hell**.
+BTK is a modern, lightweight, and self-contained GUI framework designed to be a **stable, high-performance** alternative to GTK. It features **GPU-accelerated rendering** using OpenGL and aims to be **free from GNOME's breaking changes and dependency hell**.
 
 ## Features
 - **Vulkan-based rendering** – Fully hardware-accelerated UI with high performance.
-- **Self-contained** – Only requires `vulkan.so/.dll`; everything else is statically linked.
 - **No external dependencies** – No GLib, no GNOME clutter, no unnecessary runtime dependencies.
 - **Cross-platform** – Initially targeting Linux and Windows, with potential macOS support.
 - **Lightweight and fast** – Minimal overhead compared to Qt or GTK.
@@ -29,7 +28,7 @@ btk_main_loop(window);
 ```
 
 ## Roadmap
-- [ ] Basic Vulkan rendering
+- [ ] Basic OpenGL rendering
 - [ ] Windowing and event handling (via GLFW)
 - [ ] UI widget system
 - [ ] Theming system
