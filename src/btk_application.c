@@ -7,7 +7,7 @@
 
 
 
-BTKApplication* btk_application_create() {
+BTKApplication* btk_application_create(BTKApplicationFlags flags) {
     BTKApplication* app = malloc(sizeof(BTKApplication));
 
     if (!app) { return NULL; }

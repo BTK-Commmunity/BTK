@@ -3,12 +3,12 @@
 #include <stdbool.h>
 
 int main() {
-    BTKApplication* app = btk_application_create();
+    BTKApplication* app = btk_application_create(BTK_APPLICATION_FLAGS_DEFAULT);
 
     BTKWindow* win = btk_window_create("Hello", 800, 600, (BTKWindowFlags){.resizeable = false});
 
 
     btk_application_window_add(app, win);
 
-    while (1) {}
+    btk_application_run(app);
 }
