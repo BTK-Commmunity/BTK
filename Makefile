@@ -1,6 +1,6 @@
 CC ?= gcc
-CFLAGS ?= -Wall -Wextra -O2 `pkg-config --cflags glfw3`
-LDFLAGS = `pkg-config --libs glfw3` -lGL
+CFLAGS ?= -Wall -Wextra `pkg-config --cflags glfw3` -std=c99
+LDFLAGS = `pkg-config --libs --static glfw3` -lGL
 
 SRCDIR = src
 BUILDDIR ?= build
