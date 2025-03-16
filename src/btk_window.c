@@ -2,6 +2,7 @@
 
 #include <GLFW/glfw3.h>
 
+
 #include <stdint.h>
 #include <stdlib.h>
 
@@ -19,12 +20,17 @@ BTKWindow* btk_window_create(BTKApplication* app, const char* title, int width, 
 
 
     window->win = glfwCreateWindow(width, height, title, NULL, NULL);
+    if (!window->win) {
+        free(window);
+        return NULL;
+    }
 
     window->app = app;
     
+    window->app->window_count++;
+    window->app->windows = realloc(window->app->windows, window->app->window_count * sizeof(BTKWindow*));
 
-    window->app->windows = realloc(window->app->windows, window->app->window_count + 1);
-    window->app->windows++;
+    app->windows[app->window_count - 1] = window;
 
     return window;
 }
