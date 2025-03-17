@@ -69,3 +69,8 @@ void btk_window_destroy(BTKWindow* window) {
 
     free(window);
 }
+
+
+void btk_window_set_close_callback(BTKWindow* window, BTKWindowCloseCallbackFunc callback) {
+    window->callbacks.closeCallback = callback;
+}

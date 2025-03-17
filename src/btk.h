@@ -10,11 +10,9 @@ extern "C" {
 #include <stdbool.h>
 
 // macros
-#if defined(__cplusplus)
-    #define CLITERAL(type)      type
-#else
-    #define CLITERAL(type)      (type)
-#endif
+#define CLITERAL(type)      (type) // credit: raylib
+
+
 
 
 
@@ -27,9 +25,20 @@ typedef enum _BTKApplicationRenderingBackend {
 } BTKApplicationRenderingBackend;
 
 
+typedef struct _BTKWindow BTKWindow;
+typedef struct _BTKWindowFlags BTKWindowFlags;
+
+
+typedef void(*BTKWindowCloseCallbackFunc)(BTKWindow*);
+
+
 struct _BTKWindow {
     GLFWwindow* win; 
     BTKApplication* app;
+
+    struct {
+        BTKWindowCloseCallbackFunc closeCallback = NULL;
+    } callbacks;
 };
 
 
@@ -40,9 +49,6 @@ struct _BTKWindowFlags {
 
 
 
-typedef struct _BTKWindow BTKWindow;
-typedef struct _BTKWindowFlags BTKWindowFlags;
-
 #define BTK_APPLICATION_FLAGS_DEFAULT CLITERAL(BTKApplicationFlags){.renderingBackend = OPENGL}
 #define BTK_WINDOW_FLAGS_DEFAULT CLITERAL(BTKWindowFlags){.resizeable = true}
 
@@ -50,6 +56,8 @@ typedef struct _BTKWindowFlags BTKWindowFlags;
 struct _BTKApplicationFlags {
     BTKApplicationRenderingBackend renderingBackend;
 };
+
+
 
 
 struct _BTKApplication{
@@ -61,13 +69,22 @@ struct _BTKApplication{
 
 
 
+
+
+
 // Window related functions
 BTKWindow* btk_window_create(BTKApplication* app, const char* title, int width, int height, BTKWindowFlags flags);
 void btk_window_destroy(BTKWindow* window);
 
+void btk_window_set_close_callback(BTKWindow* window, BTKWindowCloseCallbackFunc callback);
+
+
 // Top level application
 BTKApplication* btk_application_create(BTKApplicationFlags flags);
 void btk_application_destroy(BTKApplication* app);
+
+
+
 
 
 void btk_application_run(BTKApplication* app);
