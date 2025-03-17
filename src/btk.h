@@ -1,3 +1,15 @@
+/**
+ * @file btk.h
+ * @author SusgUY446
+ * @brief A lightweight easy to use GTK alternative
+ * @version 0.1
+ * @date 2025-03-17
+ * 
+ * @copyright Copyright SusgUY446 (c) 2025
+ * 
+*/
+
+
 #ifndef BTK_H
 #define BTK_H
 
@@ -8,50 +20,54 @@ extern "C" {
 
 #include <GLFW/glfw3.h>
 #include <stdbool.h>
-
-// macros
-#define CLITERAL(type)      (type) // credit: raylib
+#include <stdint.h>
 
 
 
 
-
-// forward declarations
-typedef struct _BTKApplication BTKApplication;
-typedef struct _BTKApplicationFlags BTKApplicationFlags;
-typedef enum _BTKApplicationRenderingBackend {
+typedef enum {
     OPENGL = 0,
-    VULKAN = 1
+    VULKAN = 1  
 } BTKApplicationRenderingBackend;
 
+typedef struct _BTKApplication BTKApplication;
+typedef struct _BTKApplicationFlags BTKApplicationFlags;
 
-typedef struct _BTKWindow BTKWindow;
-typedef struct _BTKWindowFlags BTKWindowFlags;
 
 
+// Window callbacks
 typedef void(*BTKWindowCloseCallbackFunc)(BTKWindow*);
 
+/**
+ * @brief 
+ * @param resizeable If the window should be resizeable by the end user
+ */
+typedef struct {
+    bool resizeable;
+} BTKWindowFlags;
 
-struct _BTKWindow {
-    GLFWwindow* win; 
+typedef struct {
+    GLFWwindow* win;
     BTKApplication* app;
 
     struct {
-        BTKWindowCloseCallbackFunc closeCallback = NULL;
+        BTKWindowCloseCallbackFunc closeCallback;
     } callbacks;
-};
+} BTKWindow;
 
 
 
-struct _BTKWindowFlags {
-    bool resizeable;
-};
 
 
 
-#define BTK_APPLICATION_FLAGS_DEFAULT CLITERAL(BTKApplicationFlags){.renderingBackend = OPENGL}
-#define BTK_WINDOW_FLAGS_DEFAULT CLITERAL(BTKWindowFlags){.resizeable = true}
 
+
+
+
+
+
+#define BTK_WINDOW_FLAGS_DEFAULT (BTKWindowFlags){.resizeable = true}
+#define BTK_APPLICATION_FLAGS_DEFAULT (BTKApplicationFlags){.renderingBackend = OPENGL}
 
 struct _BTKApplicationFlags {
     BTKApplicationRenderingBackend renderingBackend;
@@ -59,8 +75,7 @@ struct _BTKApplicationFlags {
 
 
 
-
-struct _BTKApplication{
+struct _BTKApplication {
     BTKApplicationFlags flags;
     BTKWindow** windows;
     uint32_t window_count;
@@ -71,20 +86,20 @@ struct _BTKApplication{
 
 
 
-
-// Window related functions
 BTKWindow* btk_window_create(BTKApplication* app, const char* title, int width, int height, BTKWindowFlags flags);
+
+
 void btk_window_destroy(BTKWindow* window);
+
 
 void btk_window_set_close_callback(BTKWindow* window, BTKWindowCloseCallbackFunc callback);
 
 
-// Top level application
 BTKApplication* btk_application_create(BTKApplicationFlags flags);
+
+
+
 void btk_application_destroy(BTKApplication* app);
-
-
-
 
 
 void btk_application_run(BTKApplication* app);
