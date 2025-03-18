@@ -1,0 +1,72 @@
+\doxysection{src/btk\+\_\+application.c File Reference}
+\hypertarget{btk__application_8c}{}\label{btk__application_8c}\index{src/btk\_application.c@{src/btk\_application.c}}
+{\ttfamily \#include "{}btk.\+h"{}}\newline
+{\ttfamily \#include $<$GLFW/glfw3.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{btk_8h_aaffb568a28d26a76c694f2051eda965a}{BTKApplication}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{btk__application_8c_aa681581fbd7c84af0b71cd1cf898102e}{btk\+\_\+application\+\_\+create}} (\mbox{\hyperlink{btk_8h_af2cde4a7a1c4ffe00a57acaf217c9841}{BTKApplication\+Flags}} \mbox{\hyperlink{glad_8h_ac7ba7d3cce3d19ca020e056b37231289}{flags}})
+\begin{DoxyCompactList}\small\item\em Create a new application instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{glad_8h_a950fc91edb4504f62f1c577bf4727c29}{void}} \mbox{\hyperlink{btk__application_8c_ab8b1a210c16f650c31c028940baf6c10}{btk\+\_\+application\+\_\+destroy}} (\mbox{\hyperlink{btk_8h_aaffb568a28d26a76c694f2051eda965a}{BTKApplication}} \texorpdfstring{$\ast$}{*}app)
+\begin{DoxyCompactList}\small\item\em Destroy an application and free associated resources. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{glad_8h_a950fc91edb4504f62f1c577bf4727c29}{void}} \mbox{\hyperlink{btk__application_8c_ad9ab0bc13ab1e5d8f9a209051058feb7}{btk\+\_\+application\+\_\+run}} (\mbox{\hyperlink{btk_8h_aaffb568a28d26a76c694f2051eda965a}{BTKApplication}} \texorpdfstring{$\ast$}{*}app)
+\begin{DoxyCompactList}\small\item\em Run the main loop of the application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{btk__application_8c_aa681581fbd7c84af0b71cd1cf898102e}\index{btk\_application.c@{btk\_application.c}!btk\_application\_create@{btk\_application\_create}}
+\index{btk\_application\_create@{btk\_application\_create}!btk\_application.c@{btk\_application.c}}
+\doxysubsubsection{\texorpdfstring{btk\_application\_create()}{btk\_application\_create()}}
+{\footnotesize\ttfamily \label{btk__application_8c_aa681581fbd7c84af0b71cd1cf898102e} 
+\mbox{\hyperlink{btk_8h_aaffb568a28d26a76c694f2051eda965a}{BTKApplication}} \texorpdfstring{$\ast$}{*} btk\+\_\+application\+\_\+create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{btk_8h_af2cde4a7a1c4ffe00a57acaf217c9841}{BTKApplication\+Flags}}}]{flags}{}\end{DoxyParamCaption})}
+
+
+
+Create a new application instance. 
+
+This function creates a new application with the specified flags.
+
+
+\begin{DoxyParams}{Parameters}
+{\em flags} & The flags for configuring the application (e.\+g., rendering backend). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the newly created application. 
+\end{DoxyReturn}
+\Hypertarget{btk__application_8c_ab8b1a210c16f650c31c028940baf6c10}\index{btk\_application.c@{btk\_application.c}!btk\_application\_destroy@{btk\_application\_destroy}}
+\index{btk\_application\_destroy@{btk\_application\_destroy}!btk\_application.c@{btk\_application.c}}
+\doxysubsubsection{\texorpdfstring{btk\_application\_destroy()}{btk\_application\_destroy()}}
+{\footnotesize\ttfamily \label{btk__application_8c_ab8b1a210c16f650c31c028940baf6c10} 
+\mbox{\hyperlink{glad_8h_a950fc91edb4504f62f1c577bf4727c29}{void}} btk\+\_\+application\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{btk_8h_aaffb568a28d26a76c694f2051eda965a}{BTKApplication}} \texorpdfstring{$\ast$}{*}}]{app}{}\end{DoxyParamCaption})}
+
+
+
+Destroy an application and free associated resources. 
+
+This function destroys the given application and releases its resources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em app} & The application to destroy. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{btk__application_8c_ad9ab0bc13ab1e5d8f9a209051058feb7}\index{btk\_application.c@{btk\_application.c}!btk\_application\_run@{btk\_application\_run}}
+\index{btk\_application\_run@{btk\_application\_run}!btk\_application.c@{btk\_application.c}}
+\doxysubsubsection{\texorpdfstring{btk\_application\_run()}{btk\_application\_run()}}
+{\footnotesize\ttfamily \label{btk__application_8c_ad9ab0bc13ab1e5d8f9a209051058feb7} 
+\mbox{\hyperlink{glad_8h_a950fc91edb4504f62f1c577bf4727c29}{void}} btk\+\_\+application\+\_\+run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{btk_8h_aaffb568a28d26a76c694f2051eda965a}{BTKApplication}} \texorpdfstring{$\ast$}{*}}]{app}{}\end{DoxyParamCaption})}
+
+
+
+Run the main loop of the application. 
+
+This function enters the main loop of the application and starts processing events.
+
+
+\begin{DoxyParams}{Parameters}
+{\em app} & The application to run. \\
+\hline
+\end{DoxyParams}

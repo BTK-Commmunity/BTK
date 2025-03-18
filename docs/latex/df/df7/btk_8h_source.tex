@@ -1,0 +1,104 @@
+\doxysection{btk.\+h}
+\hypertarget{btk_8h_source}{}\label{btk_8h_source}\index{src/btk.h@{src/btk.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifndef\ BTK\_H}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ BTK\_H}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00017\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_cplusplus}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <GLFW/glfw3.h>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ OPENGL\ =\ 0,}
+\DoxyCodeLine{00030\ \ \ \ \ VULKAN\ =\ 1\ \ }
+\DoxyCodeLine{00031\ \}\ BTKApplicationRenderingBackend;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\_BTKApplication\ BTKApplication;}
+\DoxyCodeLine{00034\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\_BTKApplicationFlags\ BTKApplicationFlags;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{comment}{//\ Window\ callbacks}}
+\DoxyCodeLine{00039\ \textcolor{keyword}{typedef}\ void(*BTKWindowCloseCallbackFunc)(BTKWindow*);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{bool}\ resizeable;}
+\DoxyCodeLine{00047\ \}\ \mbox{\hyperlink{structBTKWindowFlags}{BTKWindowFlags}};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00050\ \ \ \ \ GLFWwindow*\ win;}
+\DoxyCodeLine{00051\ \ \ \ \ BTKApplication*\ app;}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ BTKWindowCloseCallbackFunc\ closeCallback;}
+\DoxyCodeLine{00055\ \ \ \ \ \}\ callbacks;}
+\DoxyCodeLine{00056\ \}\ BTKWindow;}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ BTK\_WINDOW\_FLAGS\_DEFAULT\ (BTKWindowFlags)\{.resizeable\ =\ true\}}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ BTK\_APPLICATION\_FLAGS\_DEFAULT\ (BTKApplicationFlags)\{.renderingBackend\ =\ OPENGL\}}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{struct\ }\_BTKApplicationFlags\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ BTKApplicationRenderingBackend\ renderingBackend;}
+\DoxyCodeLine{00074\ \};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{keyword}{struct\ }\_BTKApplication\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ BTKApplicationFlags\ flags;}
+\DoxyCodeLine{00080\ \ \ \ \ BTKWindow**\ windows;}
+\DoxyCodeLine{00081\ \ \ \ \ uint32\_t\ window\_count;}
+\DoxyCodeLine{00082\ \};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ BTKWindow*\ btk\_window\_create(BTKApplication*\ app,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ title,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height,\ \mbox{\hyperlink{structBTKWindowFlags}{BTKWindowFlags}}\ flags);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{keywordtype}{void}\ btk\_window\_destroy(BTKWindow*\ window);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{keywordtype}{void}\ btk\_window\_set\_close\_callback(BTKWindow*\ window,\ BTKWindowCloseCallbackFunc\ callback);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ BTKApplication*\ btk\_application\_create(BTKApplicationFlags\ flags);}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \textcolor{keywordtype}{void}\ btk\_application\_destroy(BTKApplication*\ app);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{keywordtype}{void}\ btk\_application\_run(BTKApplication*\ app);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00109\ \}}
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_cplusplus}}
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BTK\_H}}
+
+\end{DoxyCode}

@@ -25,14 +25,18 @@ extern "C" {
 
 
 
-typedef enum {
+typedef enum BTKApplicationRenderingBackend {
     OPENGL = 0,
     VULKAN = 1  
 } BTKApplicationRenderingBackend;
 
-typedef struct _BTKApplication BTKApplication;
-typedef struct _BTKApplicationFlags BTKApplicationFlags;
+typedef struct BTKApplication BTKApplication;
+typedef struct BTKApplicationFlags BTKApplicationFlags;
 
+
+
+typedef struct BTKWindow BTKWindow;
+typedef struct BTKWindowFlags BTKWindowFlags;
 
 
 // Window callbacks
@@ -41,19 +45,19 @@ typedef void(*BTKWindowCloseCallbackFunc)(BTKWindow*);
 /**
  * @brief 
  * @param resizeable If the window should be resizeable by the end user
- */
-typedef struct {
+ */ 
+struct BTKWindowFlags {
     bool resizeable;
-} BTKWindowFlags;
+};
 
-typedef struct {
+struct BTKWindow {
     GLFWwindow* win;
     BTKApplication* app;
 
     struct {
         BTKWindowCloseCallbackFunc closeCallback;
     } callbacks;
-} BTKWindow;
+};
 
 
 
@@ -69,13 +73,13 @@ typedef struct {
 #define BTK_WINDOW_FLAGS_DEFAULT (BTKWindowFlags){.resizeable = true}
 #define BTK_APPLICATION_FLAGS_DEFAULT (BTKApplicationFlags){.renderingBackend = OPENGL}
 
-struct _BTKApplicationFlags {
+struct BTKApplicationFlags {
     BTKApplicationRenderingBackend renderingBackend;
 };
 
 
 
-struct _BTKApplication {
+struct BTKApplication {
     BTKApplicationFlags flags;
     BTKWindow** windows;
     uint32_t window_count;
