@@ -1,17 +1,26 @@
-name: Doxygen GitHub Pages Deploy Action
+name: Generate Doxygen Docs
 
 on:
   push:
     branches:
       - dev
-
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - uses: DenverCoder1/doxygen-github-pages-action@v2.0.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          config_file: Doxyfile
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Doxygen
+        run: sudo apt install doxygen graphviz -y
+
+      - name: Generate Documentation
+        run: doxygen Doxyfile
+
+      - name: Commit and Push Docs
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add docs
+          git commit -m "Update Doxygen documentation" || echo "No changes to commit"
+          git push
