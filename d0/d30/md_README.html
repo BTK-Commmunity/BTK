@@ -107,7 +107,70 @@ $(function(){initNavTree('d0/d30/md_README.html','../../'); initResizable(true);
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="autotoc_md0"></a></p>
-<p>BTK is designed to be a easier to use and more lightweigth alternative to GTK </p>
+<p>BTK is designed to be a easier to use and more lightweigth alternative to GTK</p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Features</h1>
+<ul>
+<li>Cross platform</li>
+<li>Easy to understand API</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Installation</h1>
+<p>Install BTK from source</p>
+<div class="fragment"><div class="line">git clone https://github.com/BTK-Community/BTK</div>
+<div class="line">cd BTK</div>
+<div class="line">make</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md3"></a>
+Dependencies</h1>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Build requirements</h2>
+<ul>
+<li>C99 supporting compiler</li>
+<li>ar [Only for static library builds]</li>
+<li>GNU Make</li>
+<li>pkg-config</li>
+<li>OpenGL</li>
+<li>GLFW</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md5"></a>
+Runtime dependencies</h2>
+<ul>
+<li>OpenGL</li>
+<li>GLFW</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md6"></a>
+Usage/Examples</h1>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;btk/btk.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line">    BTKApplication* app = btk_application_create(BTK_APPLICATION_FLAGS_DEFAULT);</div>
+<div class="line"> </div>
+<div class="line">    BTKWindow* window = btk_window_create(app, <span class="stringliteral">&quot;Hello World&quot;</span>, 800, 600, BTK_WINDOW_FLAGS_DEFAULT);</div>
+<div class="line"> </div>
+<div class="line">    </div>
+<div class="line">    btk_application_run(app);</div>
+<div class="line">}</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md7"></a>
+Contributing</h1>
+<p>Contributions are always welcome!</p>
+<p>See <code>CONTRIBUTING.md</code> for ways to get started.</p>
+<p>Please adhere to this project's <code>code of conduct</code>.</p>
+<h1><a class="anchor" id="autotoc_md8"></a>
+Documentation</h1>
+<p><a href="https://btk-commmunity.github.io/BTK/">Documentation</a></p>
+<h1><a class="anchor" id="autotoc_md9"></a>
+Feedback</h1>
+<p>If you have any feedback, please reach out to us in the issues section</p>
+<h1><a class="anchor" id="autotoc_md10"></a>
+License</h1>
+<p><a href="https://github.com/non-ai-licenses/non-ai-licenses/blob/main/NON-AI-BSD3">3 Clause No-Ai BSD</a></p>
+<h1><a class="anchor" id="autotoc_md11"></a>
+Authors</h1>
+<ul>
+<li><a href="https://www.github.com/susguy446">@susguy446</a> </li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

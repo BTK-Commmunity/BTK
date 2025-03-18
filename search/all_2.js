@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gladglversionstruct_0',['gladGLversionStruct',['../d5/d48/structgladGLversionStruct.html',1,'']]]
+  ['contributing_0',['Contributing',['../d0/d30/md_README.html#autotoc_md7',1,'']]]
 ];

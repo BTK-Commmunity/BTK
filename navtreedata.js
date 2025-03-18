@@ -25,7 +25,20 @@
 var NAVTREE =
 [
   [ "BTK", "index.html", [
-    [ "BTK - Better Toolkit", "d0/d30/md_README.html", null ],
+    [ "BTK - Better Toolkit", "d0/d30/md_README.html", [
+      [ "Features", "d0/d30/md_README.html#autotoc_md1", null ],
+      [ "Installation", "d0/d30/md_README.html#autotoc_md2", null ],
+      [ "Dependencies", "d0/d30/md_README.html#autotoc_md3", [
+        [ "Build requirements", "d0/d30/md_README.html#autotoc_md4", null ],
+        [ "Runtime dependencies", "d0/d30/md_README.html#autotoc_md5", null ]
+      ] ],
+      [ "Usage/Examples", "d0/d30/md_README.html#autotoc_md6", null ],
+      [ "Contributing", "d0/d30/md_README.html#autotoc_md7", null ],
+      [ "Documentation", "d0/d30/md_README.html#autotoc_md8", null ],
+      [ "Feedback", "d0/d30/md_README.html#autotoc_md9", null ],
+      [ "License", "d0/d30/md_README.html#autotoc_md10", null ],
+      [ "Authors", "d0/d30/md_README.html#autotoc_md11", null ]
+    ] ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ]
