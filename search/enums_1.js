@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['enumtype_0',['EnumType',['../d8/deb/classAfterdoc__Test.html#adab0cd7ad3b4875e245ca8f6238a388a',1,'Afterdoc_Test']]],
-  ['etype_1',['EType',['../d7/d8d/classAutolink__Test.html#aeb611627c332d067bded1806b1bb45c2',1,'Autolink_Test']]]
+  ['khronos_5fboolean_5fenum_5ft_0',['khronos_boolean_enum_t',['../d7/d3a/khrplatform_8h.html#a0b823cfbc138820708978d43a5f26c64',1,'khrplatform.h']]]
 ];

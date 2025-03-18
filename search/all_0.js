@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['_5f_5finit_5f_5f_0',['__init__',['../d7/dfd/classdocstring_1_1PyClass.html#a00dd800dc15e2b727e2a37c6f6c40e8b',1,'docstring.PyClass.__init__()'],['../dc/d24/classpyexample_1_1PyClass.html#a87e20fe7e81cb5a1c04e620c076ab8ac',1,'pyexample.PyClass.__init__(self)']]],
-  ['_5fmemvar_1',['_memVar',['../dc/d24/classpyexample_1_1PyClass.html#a9165738cd516769e4fcd274219e9d255',1,'pyexample::PyClass']]]
+  ['better_20toolkit_0',['BTK - Better Toolkit',['../d0/d30/md_README.html',1,'']]],
+  ['btk_20better_20toolkit_1',['BTK - Better Toolkit',['../d0/d30/md_README.html',1,'']]],
+  ['btkwindowflags_2',['BTKWindowFlags',['../d0/d9f/structBTKWindowFlags.html',1,'']]]
 ];

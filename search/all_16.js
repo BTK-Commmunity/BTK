@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['_7eautolink_5ftest_0',['~Autolink_Test',['../d7/d8d/classAutolink__Test.html#a03bf46c8e2b733680035f524fd7b193b',1,'Autolink_Test']]],
-  ['_7ejavadoc_5ftest_1',['~Javadoc_Test',['../d8/da6/classJavadoc__Test.html#a60016cd15a4ed82bbc35be79a0a6a6b5',1,'Javadoc_Test']]],
-  ['_7eqtstyle_5ftest_2',['~QTstyle_Test',['../de/d73/classQTstyle__Test.html#a7e82397d534d9a867f0857da01a46e9e',1,'QTstyle_Test']]]
+  ['x_0',['x',['../d4/da9/glad_8h.html#a92d0386e5c19fb81ea88c9f99644ab1d',1,'glad.h']]],
+  ['xoffset_1',['xoffset',['../d4/da9/glad_8h.html#ac20a0ffebf4c476650fcfa0633066f0e',1,'glad.h']]]
 ];

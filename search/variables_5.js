@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['handler_0',['handler',['../d8/da6/classJavadoc__Test.html#ace81a523a4eef44501a841a6d338832b',1,'Javadoc_Test::handler()'],['../de/d73/classQTstyle__Test.html#a79dd4e5498f09057775a819d911349e2',1,'QTstyle_Test::handler()']]]
+  ['renderingbackend_0',['renderingBackend',['../d9/dd2/struct__BTKApplicationFlags.html#a033e68538ebba7e35bf529d66faba6ad',1,'_BTKApplicationFlags']]],
+  ['resizeable_1',['resizeable',['../da/d74/struct__BTKWindowFlags.html#a9e224780e1053349d42921f2499938c1',1,'_BTKWindowFlags']]]
 ];

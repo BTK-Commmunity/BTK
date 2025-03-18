@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['base_0',['base',['../d0/dba/structVehicle.html#ad7970f528d429f6fc1725173e93a77c2',1,'Vehicle::base()'],['../dd/d92/structCar.html#ab8ff28306286da5a8b14fa9bdccaafaa',1,'Car::base()'],['../d7/d01/structTruck.html#ad0ac321609dda1a6c552488b05ec7ac8',1,'Truck::base()']]]
+  ['callbacks_0',['callbacks',['../df/d32/struct__BTKWindow.html#a84be7163a1ffbce552fc95797571f542',1,'_BTKWindow']]],
+  ['closecallback_1',['closeCallback',['../df/d32/struct__BTKWindow.html#ad5497be4863a009a5e9c2d28ceafcc3d',1,'_BTKWindow']]]
 ];

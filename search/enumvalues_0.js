@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['eval1_0',['EVal1',['../d8/deb/classAfterdoc__Test.html#adab0cd7ad3b4875e245ca8f6238a388aae054276790e35692ad0abe10c5b75da4',1,'Afterdoc_Test']]],
-  ['eval2_1',['EVal2',['../d8/deb/classAfterdoc__Test.html#adab0cd7ad3b4875e245ca8f6238a388aac849f37624d8d2d68ca72c4a8df9cf99',1,'Afterdoc_Test']]]
+  ['khronos_5fboolean_5fenum_5fforce_5fsize_0',['KHRONOS_BOOLEAN_ENUM_FORCE_SIZE',['../d7/d3a/khrplatform_8h.html#a0b823cfbc138820708978d43a5f26c64a47d7d559cf039488acac78e797bc3cf9',1,'khrplatform.h']]],
+  ['khronos_5ffalse_1',['KHRONOS_FALSE',['../d7/d3a/khrplatform_8h.html#a0b823cfbc138820708978d43a5f26c64a37d68e7202b4d30f7742acebb50d1ba6',1,'khrplatform.h']]],
+  ['khronos_5ftrue_2',['KHRONOS_TRUE',['../d7/d3a/khrplatform_8h.html#a0b823cfbc138820708978d43a5f26c64a9275264520295ae24bc2033c05d6cb70',1,'khrplatform.h']]]
 ];
