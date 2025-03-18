@@ -24,7 +24,10 @@ extern "C" {
 
 
 
-
+/**
+ * @brief 
+ * 
+ */
 typedef enum BTKApplicationRenderingBackend {
     OPENGL = 0,
     VULKAN = 1  
