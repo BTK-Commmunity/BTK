@@ -1,3 +1,6 @@
 build/
 *.out
 
+examples/*
+!examples/*.c
+!examples/Makefile

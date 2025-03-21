@@ -25,28 +25,27 @@ extern "C" {
 
 
 /**
- * @brief 
- * 
- */
+ * @brief Enum to set what graphics api a application should use
+*/
 typedef enum BTKApplicationRenderingBackend {
     OPENGL = 0,
     VULKAN = 1  
 } BTKApplicationRenderingBackend;
 
+// forward declarations (dont document with doxygen here but at the actual structs)
 typedef struct BTKApplication BTKApplication;
 typedef struct BTKApplicationFlags BTKApplicationFlags;
-
-
-
 typedef struct BTKWindow BTKWindow;
 typedef struct BTKWindowFlags BTKWindowFlags;
 
 
 // Window callbacks
+
+
 typedef void(*BTKWindowCloseCallbackFunc)(BTKWindow*);
 
 /**
- * @brief 
+ * @brief Flags for a window
  * @param resizeable If the window should be resizeable by the end user
  */ 
 struct BTKWindowFlags {
@@ -98,6 +97,8 @@ BTKWindow* btk_window_create(BTKApplication* app, const char* title, int width, 
 
 void btk_window_destroy(BTKWindow* window);
 
+
+void btk_window_poll(BTKWindow* window);
 
 void btk_window_set_close_callback(BTKWindow* window, BTKWindowCloseCallbackFunc callback);
 

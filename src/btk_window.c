@@ -71,6 +71,11 @@ void btk_window_destroy(BTKWindow* window) {
 }
 
 
+void btk_window_poll(BTKWindow* window) {
+    glfwMakeContextCurrent(window->win);
+    glfwPollEvents();
+}
+
 void btk_window_set_close_callback(BTKWindow* window, BTKWindowCloseCallbackFunc callback) {
     window->callbacks.closeCallback = callback;
 }

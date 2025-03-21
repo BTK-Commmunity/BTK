@@ -15,6 +15,7 @@ BTKApplication* btk_application_create(BTKApplicationFlags flags) {
 
     app->flags = flags;
 
+    glfwInitHint(GLFW_PLATFORM, GLFW_PLATFORM_X11); // TODO: remove for non dev releases
     glfwInit();
 
     switch (app->flags.renderingBackend) {
@@ -25,6 +26,7 @@ BTKApplication* btk_application_create(BTKApplicationFlags flags) {
             break;
 
         case VULKAN:
+            
             glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API); // tell glfw to not create a context because we do that ourself in vulkan
             break;
     }
@@ -47,7 +49,6 @@ void btk_application_destroy(BTKApplication* app) {
 
 void btk_application_run(BTKApplication* app) {
     while (1) {
-        glfwPollEvents();
         for (uint32_t i = 0; i < app->window_count; i++) {
             if (glfwWindowShouldClose(app->windows[i]->win)) {
                 btk_window_destroy(app->windows[i]);
