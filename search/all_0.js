@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['authors_0',['Authors',['../d0/d30/md_README.html#autotoc_md11',1,'']]]
+  ['btkwindow_0',['BTKWindow',['../da/db4/structBTKWindow.html',1,'']]],
+  ['btkwindowflags_1',['BTKWindowFlags',['../d0/d9f/structBTKWindowFlags.html',1,'']]]
 ];
