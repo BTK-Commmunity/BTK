@@ -14,7 +14,8 @@ var NAVTREEINDEX0 =
 "d0/d30/md_README.html#autotoc_md7":[0,4],
 "d0/d30/md_README.html#autotoc_md8":[0,5],
 "d0/d30/md_README.html#autotoc_md9":[0,6],
-"d0/d9f/structBTKWindowFlags.html":[1,0,0],
+"d0/d9f/structBTKWindowFlags.html":[1,0,1],
+"da/db4/structBTKWindow.html":[1,0,0],
 "index.html":[],
 "pages.html":[]
 };
