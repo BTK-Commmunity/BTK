@@ -6,3 +6,5 @@ examples/*
 # not ignore .c files and the makefile in the examples directory
 !examples/*.c
 !examples/Makefile
+
+docs/
