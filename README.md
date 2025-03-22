@@ -1,7 +1,7 @@
 
 # BTK - Better Toolkit
 
-BTK is designed to be a easier to use and more lightweigth alternative to GTK
+BTK is designed to be a easier to use and more lightweight alternative to GTK
 
 ## Features
 
@@ -41,14 +41,12 @@ Install BTK from source
 #include <btk/btk.h>
 
 int main() {
-int main() {
     BTKApplication* app = btk_application_create(BTK_APPLICATION_FLAGS_DEFAULT);
 
     BTKWindow* window = btk_window_create(app, "Hello World", 800, 600, BTK_WINDOW_FLAGS_DEFAULT);
 
     
     btk_application_run(app);
-}
 }
 ```
 

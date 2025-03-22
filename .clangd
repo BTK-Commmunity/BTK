@@ -1,4 +1,6 @@
 CompileFlags:
+  Add:
+    - "-Isrc/external/"
   Remove:
     - "-std=c++20"
     - "-std=c++17"

@@ -1,8 +1,12 @@
 #include "btk.h"
 
+
 #include <GLFW/glfw3.h>
 
 
+
+
+#include <stdbool.h>
 #include <stdint.h>
 #include <stdlib.h>
 
@@ -18,6 +22,10 @@ BTKWindow* btk_window_create(BTKApplication* app, const char* title, int width, 
     BTKWindow* window = malloc(sizeof(BTKWindow));
     if (!window) { return NULL; }
 
+
+    window->flags = flags;
+
+    glfwWindowHint(GLFW_RESIZABLE, flags.resizeable);
 
     window->win = glfwCreateWindow(width, height, title, NULL, NULL);
     if (!window->win) {
@@ -71,7 +79,30 @@ void btk_window_destroy(BTKWindow* window) {
 }
 
 
-void btk_window_poll(BTKWindow* window) {
+
+int btk_window_get_height(BTKWindow* window) {
+    int height;
+    glfwGetWindowSize(window->win, NULL, &height);
+    return height;
+}
+
+int btk_window_get_width(BTKWindow* window) {
+    int width;
+    glfwGetWindowSize(window->win, &width, NULL);
+    return width;
+}
+
+void btk_window_set_height(BTKWindow* window, int height) {
+    glfwSetWindowSize(window->win, btk_window_get_width(window), height);
+}
+
+void btk_window_set_width(BTKWindow* window, int width) {
+    glfwSetWindowSize(window->win, width, btk_window_get_height(window));
+}
+
+
+
+void btk_window_poll_events(BTKWindow* window) {
     glfwMakeContextCurrent(window->win);
     glfwPollEvents();
 }

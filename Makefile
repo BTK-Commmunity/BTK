@@ -1,11 +1,16 @@
 CC ?= gcc
-CFLAGS ?= -Wall -Wextra `pkg-config --cflags glfw3` -std=c99
-LDFLAGS = `pkg-config --libs --static glfw3` -lGL
 
 SRCDIR = src
 BUILDDIR ?= build
 
+
+CFLAGS ?= -Wall -Wextra `pkg-config --cflags glfw3` -std=c99 -I$(SRCDIR)/external/
+LDFLAGS = `pkg-config --libs --static glfw3` -lGL
+
+
+
 SRCS = $(wildcard $(SRCDIR)/*.c)
+SRCS += $(wildcard $(SRCDIR)/external/*.c)
 OBJS = $(patsubst $(SRCDIR)/%.c, $(BUILDDIR)/%.o, $(SRCS))
 
 LIBNAME = libbtk
