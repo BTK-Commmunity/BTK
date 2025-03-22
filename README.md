@@ -62,7 +62,7 @@ Please adhere to this project's `code of conduct`.
 
 ## Documentation
 
-[Documentation](https://btk-commmunity.github.io/BTK/)
+[Documentation](https://btk-community.github.io/BTK/)
 
 
 ## Feedback
