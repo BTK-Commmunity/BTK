@@ -80,7 +80,7 @@ QT_AUTOBRIEF           = NO
 MULTILINE_CPP_IS_BRIEF = NO
 
 
-PYTHON_DOCSTRING       = YES
+PYTHON_DOCSTRING       = NO
 
 
 INHERIT_DOCS           = YES
@@ -161,7 +161,7 @@ TYPEDEF_HIDES_STRUCT   = NO
 LOOKUP_CACHE_SIZE      = 0
 
 
-NUM_PROC_THREADS       = 1
+NUM_PROC_THREADS       = 2
 
 
 TIMESTAMP              = NO
@@ -255,16 +255,16 @@ SORT_BY_SCOPE_NAME     = NO
 STRICT_PROTO_MATCHING  = NO
 
 
-GENERATE_TODOLIST      = YES
+GENERATE_TODOLIST      = NO
 
 
-GENERATE_TESTLIST      = YES
+GENERATE_TESTLIST      = NO
 
 
-GENERATE_BUGLIST       = YES
+GENERATE_BUGLIST       = No
 
 
-GENERATE_DEPRECATEDLIST= YES
+GENERATE_DEPRECATEDLIST= NO
 
 
 ENABLED_SECTIONS       =
@@ -342,65 +342,16 @@ INPUT_FILE_ENCODING    =
 
 
 FILE_PATTERNS          = *.c \
-                         *.cc \
-                         *.cxx \
-                         *.cxxm \
-                         *.cpp \
-                         *.cppm \
-                         *.ccm \
-                         *.c++ \
-                         *.c++m \
-                         *.java \
-                         *.ii \
-                         *.ixx \
-                         *.ipp \
-                         *.i++ \
-                         *.inl \
-                         *.idl \
-                         *.ddl \
-                         *.odl \
-                         *.h \
-                         *.hh \
-                         *.hxx \
-                         *.hpp \
-                         *.h++ \
-                         *.ixx \
-                         *.l \
-                         *.cs \
-                         *.d \
-                         *.php \
-                         *.php4 \
-                         *.php5 \
-                         *.phtml \
-                         *.inc \
-                         *.m \
-                         *.markdown \
-                         *.md \
-                         *.mm \
-                         *.dox \
-                         *.py \
-                         *.pyw \
-                         *.f90 \
-                         *.f95 \
-                         *.f03 \
-                         *.f08 \
-                         *.f18 \
-                         *.f \
-                         *.for \
-                         *.vhd \
-                         *.vhdl \
-                         *.ucf \
-                         *.qsf \
-                         *.ice
+                         *.h
 
 
-RECURSIVE              = YES
+RECURSIVE              = NO
 
 
 EXCLUDE                =
 
 
-EXCLUDE_SYMLINKS       = NO
+EXCLUDE_SYMLINKS       = YES
 
 
 EXCLUDE_PATTERNS       =
@@ -689,8 +640,7 @@ EXTRA_SEARCH_MAPPINGS  =
 
 
 
-GENERATE_LATEX         = YES
-
+GENERATE_LATEX         = NO
 
 LATEX_OUTPUT           = latex
 
